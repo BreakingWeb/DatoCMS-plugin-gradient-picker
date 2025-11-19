@@ -1,9 +1,9 @@
 {
-  "name": "datocms-plugin-gradient-picker",
+  "name": "@breaking/datocms-plugin-gradient-picker",
   "description": "A powerful gradient picker plugin for creating multi-color CSS gradients with full control over colors, stops, and angles. Perfect for creating beautiful backgrounds, hero sections, and visual effects. Outputs clean CSS gradient strings ready to use in your components.",
-  "homepage": "https://github.com/BreakingWeb/DatoCMS-plugin-gradient-picker",
+  "homepage": "https://github.com/BreakingWeb/DatoCMS-plugin-gradient-picker#readme",
   "private": false,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "breaking web <manu@breakingweb.com>",
   "type": "module",
   "packageManager": "pnpm@10.10.0",
@@ -49,5 +49,17 @@
     "globals": "^15.9.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
+  },
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BreakingWeb/DatoCMS-plugin-gradient-picker.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BreakingWeb/DatoCMS-plugin-gradient-picker/issues"
   }
 }
