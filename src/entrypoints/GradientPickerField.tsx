@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import ColorPicker from "react-best-gradient-color-picker";
 import s from "./GradientPickerField.module.css";
 import { useTranslations } from "../i18n/useTranslations";
+import get from "lodash/get";
 
 type Props = {
   ctx: RenderFieldExtensionCtx;
@@ -27,8 +28,9 @@ type PluginParameters = {
 };
 
 export default function GradientPickerField({ ctx }: Props) {
-  const currentValue = (ctx.formValues[ctx.fieldPath] as string) || "";
   const t = useTranslations(ctx);
+  const currentValue = (get(ctx.formValues, ctx.fieldPath) as string) || "";
+
   const [gradient, setGradient] = useState<string>(
     currentValue || "linear-gradient(90deg, rgb(255,0,0) 0%, rgb(0,0,255) 100%)"
   );
@@ -54,24 +56,12 @@ export default function GradientPickerField({ ctx }: Props) {
 
   const isInvalid = !isValidGradient(gradient);
 
-  // Sync gradient state with field value changes
+  // Sync gradient state with field value changes from DatoCMS
   useEffect(() => {
-    if (currentValue && currentValue !== gradient) {
+    if (currentValue !== gradient) {
       setGradient(currentValue);
     }
-  }, [currentValue]);
-
-  // Set field-level error if gradient is invalid
-  useEffect(() => {
-    if (isInvalid && gradient.trim() !== "") {
-      ctx.setFieldValue(ctx.fieldPath, gradient);
-      // Block save by marking field as invalid
-      // Note: DatoCMS doesn't expose a direct API to block saves,
-      // but we can show the error state visually
-    } else {
-      ctx.setFieldValue(ctx.fieldPath, gradient);
-    }
-  }, [gradient, isInvalid, ctx, ctx.fieldPath]);
+  }, [currentValue, gradient]);
 
   const handleTogglePicker = () => {
     if (!isPickerOpen && buttonRef.current) {
@@ -105,6 +95,11 @@ export default function GradientPickerField({ ctx }: Props) {
   }, [isPickerOpen]);
 
   const handleTextFieldChange = (newValue: string) => {
+    setGradient(newValue);
+    ctx.setFieldValue(ctx.fieldPath, newValue);
+  };
+
+  const handleGradientChange = (newValue: string) => {
     setGradient(newValue);
     ctx.setFieldValue(ctx.fieldPath, newValue);
   };
@@ -156,7 +151,7 @@ export default function GradientPickerField({ ctx }: Props) {
             >
               <ColorPicker
                 value={gradient}
-                onChange={setGradient}
+                onChange={handleGradientChange}
                 hideControls={parameters.hideControls}
                 hideInputs={parameters.hideInputs}
                 hideOpacity={parameters.hideOpacity}
