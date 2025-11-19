@@ -44,7 +44,7 @@ Click on the gradient preview to open the full-featured color picker where you c
 - Use preset gradients for quick styling
 - Switch between linear and radial modes
 
-![Picker Interface](docs/preview-picker.png)
+<img src="docs/preview-picker.png" alt="Picker Interface" width="400" />
 
 Gradients are stored as CSS-ready strings like:
 ```css
@@ -55,7 +55,7 @@ linear-gradient(90deg, rgb(255,0,0) 0%, rgb(0,0,255) 100%)
 
 Customize the picker interface to match your needs by configuring which controls are visible to your editors:
 
-![Configuration Screen](docs/preview-config.png)
+<img src="docs/preview-config.png" alt="Configuration Screen" width="400" />
 
 Available configuration options:
 - Hide/show color input fields
