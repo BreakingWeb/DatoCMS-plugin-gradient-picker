@@ -48,7 +48,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideInputs"
                 name="hideInputs"
                 label={t.config.hideInputs.label}
-                hint={t.config.hideInputs.hint}
+                // hint={t.config.hideInputs.hint}
                 value={parameters.hideInputs ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -62,7 +62,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideOpacity"
                 name="hideOpacity"
                 label={t.config.hideOpacity.label}
-                hint={t.config.hideOpacity.hint}
+                // hint={t.config.hideOpacity.hint}
                 value={parameters.hideOpacity ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -76,7 +76,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideControls"
                 name="hideControls"
                 label={t.config.hideControls.label}
-                hint={t.config.hideControls.hint}
+                // hint={t.config.hideControls.hint}
                 value={parameters.hideControls ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -90,7 +90,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideColorTypeBtns"
                 name="hideColorTypeBtns"
                 label={t.config.hideColorTypeBtns.label}
-                hint={t.config.hideColorTypeBtns.hint}
+                // hint={t.config.hideColorTypeBtns.hint}
                 value={parameters.hideColorTypeBtns ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -104,7 +104,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hidePresets"
                 name="hidePresets"
                 label={t.config.hidePresets.label}
-                hint={t.config.hidePresets.hint}
+                // hint={t.config.hidePresets.hint}
                 value={parameters.hidePresets ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -118,7 +118,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideEyeDrop"
                 name="hideEyeDrop"
                 label={t.config.hideEyeDrop.label}
-                hint={t.config.hideEyeDrop.hint}
+                // hint={t.config.hideEyeDrop.hint}
                 value={parameters.hideEyeDrop ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -132,7 +132,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideAdvancedSliders"
                 name="hideAdvancedSliders"
                 label={t.config.hideAdvancedSliders.label}
-                hint={t.config.hideAdvancedSliders.hint}
+                // hint={t.config.hideAdvancedSliders.hint}
                 value={parameters.hideAdvancedSliders ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -146,7 +146,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideColorGuide"
                 name="hideColorGuide"
                 label={t.config.hideColorGuide.label}
-                hint={t.config.hideColorGuide.hint}
+                // hint={t.config.hideColorGuide.hint}
                 value={parameters.hideColorGuide ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -160,7 +160,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideInputType"
                 name="hideInputType"
                 label={t.config.hideInputType.label}
-                hint={t.config.hideInputType.hint}
+                // hint={t.config.hideInputType.hint}
                 value={parameters.hideInputType ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -174,7 +174,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideGradientType"
                 name="hideGradientType"
                 label={t.config.hideGradientType.label}
-                hint={t.config.hideGradientType.hint}
+                // hint={t.config.hideGradientType.hint}
                 value={parameters.hideGradientType ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -188,7 +188,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideGradientAngle"
                 name="hideGradientAngle"
                 label={t.config.hideGradientAngle.label}
-                hint={t.config.hideGradientAngle.hint}
+                // hint={t.config.hideGradientAngle.hint}
                 value={parameters.hideGradientAngle ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -202,7 +202,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideGradientStop"
                 name="hideGradientStop"
                 label={t.config.hideGradientStop.label}
-                hint={t.config.hideGradientStop.hint}
+                // hint={t.config.hideGradientStop.hint}
                 value={parameters.hideGradientStop ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
@@ -216,7 +216,7 @@ export default function ConfigScreen({ ctx }: Props) {
                 id="hideGradientControls"
                 name="hideGradientControls"
                 label={t.config.hideGradientControls.label}
-                hint={t.config.hideGradientControls.hint}
+                // hint={t.config.hideGradientControls.hint}
                 value={parameters.hideGradientControls ?? false}
                 onChange={(newValue) => {
                   ctx.updatePluginParameters({
