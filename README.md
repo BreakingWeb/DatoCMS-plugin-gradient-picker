@@ -16,11 +16,7 @@ A powerful DatoCMS plugin for creating multi-color CSS gradients with full contr
 
 ## Installation
 
-Install the plugin from the DatoCMS Plugin Marketplace or manually via npm:
-
-```bash
-pnpm add datocms-plugin-gradient-picker
-```
+Install the plugin from the [DatoCMS Plugin Marketplace](https://www.datocms.com/marketplace/plugins/i/@breaking/datocms-plugin-gradient-picker).
 
 ## Usage
 
@@ -103,6 +99,10 @@ pnpm dev
 # Build for production
 pnpm build
 ```
+
+## Credits
+
+Made by [Breaking Web](https://www.breakingweb.com)
 
 ## License
 
