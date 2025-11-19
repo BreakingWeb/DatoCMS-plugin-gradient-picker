@@ -1,1 +1,1 @@
-{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/entrypoints/configscreen.tsx","./src/entrypoints/gradientpickerfield.tsx","./src/utils/render.tsx"],"version":"5.9.3"}
+{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/entrypoints/configscreen.tsx","./src/entrypoints/gradientpickerfield.tsx","./src/i18n/translations.ts","./src/i18n/usetranslations.ts","./src/utils/render.tsx"],"version":"5.9.3"}
