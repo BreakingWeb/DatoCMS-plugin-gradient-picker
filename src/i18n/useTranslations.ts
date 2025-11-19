@@ -4,12 +4,12 @@ import { translations, type Locale, type Translations } from "./translations";
 type Ctx = RenderConfigScreenCtx | RenderFieldExtensionCtx;
 
 /**
- * Detects the locale from browser settings
+ * Detects the locale from DatoCMS context
  */
-function getLocaleFromBrowser(): Locale {
-  const browserLocale = navigator.language.toLowerCase();
+function getLocaleFromContext(ctx: Ctx): Locale {
+  const uiLocale = ctx.ui.locale.toLowerCase();
 
-  if (browserLocale.startsWith("fr")) {
+  if (uiLocale.startsWith("fr")) {
     return "fr";
   }
 
@@ -18,11 +18,9 @@ function getLocaleFromBrowser(): Locale {
 }
 
 /**
- * Hook to get translations based on the browser locale
- * Note: DatoCMS context doesn't expose user locale directly,
- * so we use browser locale as a fallback
+ * Hook to get translations based on the DatoCMS user's preferred locale
  */
-export function useTranslations(_ctx: Ctx): Translations {
-  const locale = getLocaleFromBrowser();
+export function useTranslations(ctx: Ctx): Translations {
+  const locale = getLocaleFromContext(ctx);
   return translations[locale];
 }

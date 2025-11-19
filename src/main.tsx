@@ -6,6 +6,7 @@ import { render } from "./utils/render";
 import { translations } from "./i18n/translations";
 
 // Detect browser locale for field extension name
+// Note: manualFieldExtensions() doesn't receive ctx, so we use browser locale as fallback
 function getFieldExtensionName(): string {
   const browserLocale = navigator.language.toLowerCase();
   const locale = browserLocale.startsWith("fr") ? "fr" : "en";
