@@ -1,13 +1,23 @@
 {
   "name": "datocms-plugin-gradient-picker",
-  "description": "A simple gradient picker plugin for creating smooth background gradients. Select a  starting color and adjust its opacity to generate a linear gradient that fades to  white. Perfect for hero sections and page backgrounds. Outputs clean CSS ready to  use in your components.",
+  "description": "A powerful gradient picker plugin for creating multi-color CSS gradients with full control over colors, stops, and angles. Perfect for creating beautiful backgrounds, hero sections, and visual effects. Outputs clean CSS gradient strings ready to use in your components.",
   "homepage": "https://github.com/BreakingWeb/DatoCMS-plugin-gradient-picker",
   "private": false,
   "version": "0.1.0",
   "author": "breaking web <manu@breakingweb.com>",
   "type": "module",
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=10"
+  },
   "keywords": [
-    "datocms-plugin"
+    "datocms-plugin",
+    "gradient",
+    "color-picker",
+    "css-gradient",
+    "linear-gradient",
+    "radial-gradient"
   ],
   "datoCmsPlugin": {
     "title": "Gradient Picker",
@@ -24,12 +34,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "datocms-plugin-sdk": "*",
     "datocms-react-ui": "*",
     "react": "^18.3.1",
+    "react-best-gradient-color-picker": "^3.0.14",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
